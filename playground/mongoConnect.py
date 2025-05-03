@@ -5,6 +5,8 @@ import os
 # Conectando ao servidor local
 client = MongoClient("mongodb://localhost:27017/")
 
+print(client)
+
 # Acessando o banco e a coleção
 db = client["lojadb"]
 collection = db["vendas"]
@@ -20,3 +22,4 @@ os.makedirs("C:/PythonProjects/estudocd1/data/processed", exist_ok=True)
 
 # Salvando como CSV
 df.to_csv("C:/PythonProjects/estudocd1/data/processed/dados_vendas.csv", index=False)
+
